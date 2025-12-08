@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "pyyaml": "^0.0.1",
+    "setuptools": "^0.0.1"
+  }
+}

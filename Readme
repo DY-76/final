@@ -1,0 +1,12 @@
+data 폴더
+- dataset은 original raw data입니다. 이곳에 모은 데이터를 기반으로, 각 Task에 맞도록 재가공됨
+- my_multitask_test는 재가공된 데이터입니다. 이 데이터를 기반으로 모델 파인튜닝됨
+
+build_multitask_testset.py는 dataset기반 my_multitask_test 재가공 파일
+main.py는 파인튜닝 돌아가는 파일
+
+Todo:
+- baseline 구축하고 파인튜닝본 비교?
+- 이 파이프라인이 맞는거고 잘 돌어가는건지 재검토
+- 평가지표(F1, Acc, BLEU 등) 수정 필요 (지금은 ACC, Similarity 정도로 대충 해둠)
+- 발표자료 등..
