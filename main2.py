@@ -605,14 +605,7 @@ def run_finetune_for_task(
             per_device_eval_batch_size=EVAL_BATCH_SIZE,
             learning_rate=LEARNING_RATE,
             weight_decay=WEIGHT_DECAY,
-            warmup_ratio=WARMUP_RATIO,
-            logging_steps=50,
-            evaluation_strategy="epoch",
-            save_strategy="epoch",
-            save_total_limit=1,
-            load_best_model_at_end=True,
-            gradient_accumulation_steps=GRADIENT_ACCUMULATION_STEPS,
-            report_to=[],
+            logging_steps=50
         )
 
         trainer = Trainer(

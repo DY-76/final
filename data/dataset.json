@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "source_train_file": "d:\\VSC\\25_2_se_course\\final\\data\\origin.json",
+    "source_train_file": "e:\\VSC\\se_2025_2__final\\final\\data\\origin.json",
     "num_original_items": 30,
     "num_base_items_for_test": 30,
     "num_test_samples": 105,

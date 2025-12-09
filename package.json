@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "npm": "^11.6.4",
     "pyyaml": "^0.0.1",
-    "setuptools": "^0.0.1"
+    "setuptools": "^0.0.1",
+    "torch": "^0.2.7"
   }
 }
