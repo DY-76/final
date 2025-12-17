@@ -1,0 +1,338 @@
+================================================================================
+MULTI-TASK MODEL TEST RESULTS SUMMARY
+================================================================================
+Test Date: 2025-12-16 14:54:16
+Model Directory: ./fine_tuned_multitask_model
+Total samples tested: 150
+Tasks tested: 5
+Overall Success Rate: 3.3%
+
+Task Distribution:
+  code_search: 30 samples
+  code_summary: 30 samples
+  code_generation: 30 samples
+  bug_detection: 30 samples
+  code_repair: 30 samples
+
+EVALUATION METRICS BY TASK:
+================================================================================
+
+CODE_SEARCH:
+  Samples tested: 30
+  Success rate: 13.3%
+  Average score: 0.133
+  Accuracy: 13.3%
+  Correct predictions: 4
+
+CODE_REPAIR:
+  Samples tested: 30
+  Success rate: 0.0%
+  Average score: 0.035
+  Pass@1 (execution): 0.0%
+  Syntax validity: 0.0%
+  Average similarity: 0.035
+
+CODE_SUMMARY:
+  Samples tested: 30
+  Success rate: 0.0%
+  Average score: 0.000
+  Average BLEU-4 score: 0.000
+  Max BLEU-4: 0.000
+  BLEU > 0.15 (good): 0/30
+  BLEU > 0.25 (high quality): 0/30
+  Average ROUGE-L: 0.019
+
+CODE_GENERATION:
+  Samples tested: 30
+  Success rate: 0.0%
+  Average score: 0.000
+  Average BLEU-4 score: 0.000
+  Max BLEU-4: 0.000
+  BLEU > 0.15 (good): 0/30
+  BLEU > 0.25 (high quality): 0/30
+  Average ROUGE-L: 0.043
+
+================================================================================
+SAMPLE OUTPUTS (First 3 per task)
+================================================================================
+
+CODE_SEARCH:
+----------------------------------------
+
+Sample 1:
+Input: choose the correct implementation:
+Description:
+A Sonner toast notification with an action button that lets users perform or undo operations directly from the toast.
+
+Choices:
+Option 0:
+"use client";
+...
+Expected: 0...
+Output: <?php
+/**
+ * Zend Framework
+ *
+ * LICENSE
+ *
+ * This source file is subject to the new BSD license that is bundled
+ * with this package in the file LICENSE.txt.
+ * It is also available through the wor...
+--------------------
+
+Sample 2:
+Input: choose the correct implementation:
+Description:
+A full blog post skeleton with large title, author section, hero image placeholder, and multiple text paragraphs for article pages.
+
+Choices:
+Option 0:
+...
+Expected: 1...
+Output: 4 w-full" />
+      <Skeleton className="h-4 w-full" />
+      <Skeleton className="h-4 w-full" />
+      <Skeleton className="h-4 w-full" />
+      <Skeleton className="h-4 w-full" />
+      <Skeleton cla...
+--------------------
+
+Sample 3:
+Input: choose the correct implementation:
+Description:
+A React todo-style checkbox with strikethrough text when checked for task completion lists using shadcn/ui and Tailwind CSS.
+
+Choices:
+Option 0:
+"use cl...
+Expected: 2...
+Output: ">
+        <Trash2 />
+        Trash
+      </DropdownMenuItem>
+    </DropdownMenuContent>
+  </DropdownMenu>
+);
+
+export default Example;...
+--------------------
+
+CODE_REPAIR:
+----------------------------------------
+
+Sample 1:
+Input: fix a bug: import { Skeleton } from "@/components/ui/skeleton";
+
+export const title = "Blog Post";
+
+const Example = () => (
+  <div className="flex w-full max-w-3xl flex-col gap-6">
+    <Skeleton class...
+Expected: import { Skeleton } from "@/components/ui/skeleton";
+
+export const title = "Blog Post";
+
+const Example = () => (
+  <div className="flex w-full max-w-3xl flex-col gap-6">
+    <Skeleton className="h-10 ...
+Output: <?php
+/**
+ * Zend Framework
+ *
+ * LICENSE
+ *
+ * This source file is subject to the new BSD license that is bundled
+ * with this package in the file LICENSE.txt.
+ * It is also available through the wor...
+--------------------
+
+Sample 2:
+Input: fix a bug: "use client";
+
+import { useState } from "react";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
+import { cn } from "@/lib/utils";
+
+expor...
+Expected: "use client";
+
+import { useState } from "react";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
+import { cn } from "@/lib/utils";
+
+export const tit...
+Output: <?php
+/**
+ * Zend Framework
+ *
+ * LICENSE
+ *
+ * This source file is subject to the new BSD license that is bundled
+ * with this package in the file LICENSE.txt.
+ * It is also available through the wor...
+--------------------
+
+Sample 3:
+Input: fix a bug: "use client";
+
+import { toast } from "sonner";
+import { Button } from "@/components/ui/button";
+
+export const title = "Success Toast";
+
+const Example = () => (
+  <Button
+    onClick={() => ...
+Expected: "use client";
+
+import { toast } from "sonner";
+import { Button } from "@/components/ui/button";
+
+export const title = "Success Toast";
+
+const Example = () => (
+  <Button
+    onClick={() => toast.succe...
+Output: ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+usi...
+--------------------
+
+CODE_SUMMARY:
+----------------------------------------
+
+Sample 1:
+Input: summarize code: "use client";
+
+import { toast } from "sonner";
+import { Button } from "@/components/ui/button";
+
+export const title = "Toast with Action Button";
+
+const Example = () => (
+  <Button
+   ...
+Expected: A Sonner toast notification with an action button that lets users perform or undo operations directly from the toast....
+Output: <?php
+/**
+ * Zend Framework
+ *
+ * LICENSE
+ *
+ * This source file is subject to the new BSD license that is bundled
+ * with this package in the file LICENSE.txt.
+ * It is also available through the wor...
+--------------------
+
+Sample 2:
+Input: summarize code: import { Skeleton } from "@/components/ui/skeleton";
+
+export const title = "Blog Post";
+
+const Example = () => (
+  <div className="flex w-full max-w-3xl flex-col gap-6">
+    <Skeleton ...
+Expected: A full blog post skeleton with large title, author section, hero image placeholder, and multiple text paragraphs for article pages....
+Output: // Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for
+// license information.
+//
+// Code generated by Microsoft (R) Au...
+--------------------
+
+Sample 3:
+Input: summarize code: "use client";
+
+import { useState } from "react";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
+import { cn } from "@/lib/utils";
+
+...
+Expected: A React todo-style checkbox with strikethrough text when checked for task completion lists using shadcn/ui and Tailwind CSS....
+Output: <?php
+/**
+ * Zend Framework
+ *
+ * LICENSE
+ *
+ * This source file is subject to the new BSD license that is bundled
+ * with this package in the file LICENSE.txt.
+ * It is also available through the wor...
+--------------------
+
+CODE_GENERATION:
+----------------------------------------
+
+Sample 1:
+Input: generate code: A Sonner toast notification with an action button that lets users perform or undo operations directly from the toast.
+Function signature: "use client";
+
+import { toast } from "sonner";
+...
+Expected: "use client";
+
+import { toast } from "sonner";
+import { Button } from "@/components/ui/button";
+
+export const title = "Toast with Action Button";
+
+const Example = () => (
+  <Button
+    onClick={() =>
+...
+Output: // Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for
+// license information.
+//
+// Code generated by Microsoft (R) Au...
+--------------------
+
+Sample 2:
+Input: generate code: A full blog post skeleton with large title, author section, hero image placeholder, and multiple text paragraphs for article pages.
+Function signature: import { Skeleton } from "@/compo...
+Expected: import { Skeleton } from "@/components/ui/skeleton";
+
+export const title = "Blog Post";
+
+const Example = () => (
+  <div className="flex w-full max-w-3xl flex-col gap-6">
+    <Skeleton className="h-10 ...
+Output: ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+usi...
+--------------------
+
+Sample 3:
+Input: generate code: A React todo-style checkbox with strikethrough text when checked for task completion lists using shadcn/ui and Tailwind CSS.
+Function signature: "use client";
+
+import { useState } from ...
+Expected: "use client";
+
+import { useState } from "react";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
+import { cn } from "@/lib/utils";
+
+export const tit...
+Output: // Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See License.txt in the project root for
+// license information.
+// 
+// Code generated by Microsoft (R) A...
+--------------------
