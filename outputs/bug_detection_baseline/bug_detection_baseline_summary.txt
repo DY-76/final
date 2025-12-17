@@ -1,8 +1,0 @@
-=== Single-Task Evaluation Summary ===
-
-[Task] bug_detection
-[Run ] baseline
-
-  - #samples       : 30
-  - accuracy       : 0.0000
-  - avg_similarity : 0.0028

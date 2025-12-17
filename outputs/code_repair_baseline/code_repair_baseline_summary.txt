@@ -1,8 +1,0 @@
-=== Single-Task Evaluation Summary ===
-
-[Task] code_repair
-[Run ] baseline
-
-  - #samples       : 15
-  - exact_match    : 0.0000
-  - avg_similarity : 0.0155

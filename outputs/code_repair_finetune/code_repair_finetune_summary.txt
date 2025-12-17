@@ -1,8 +1,0 @@
-=== Single-Task Evaluation Summary ===
-
-[Task] code_repair
-[Run ] finetune
-
-  - #samples       : 15
-  - exact_match    : 0.1333
-  - avg_similarity : 0.9432
